@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  cout << "Enter your desired operator\n";
+  char op;
+  int num1;
+  int num2;
+  cin >> op;
+  cout << "Enter your first number\n";
+  cin >> num1;
+  cout << "Enter your second number (Please enter a number greater than zero incase your option is to division.\n";
+  cin >> num2;
+
+  switch(op){
+    case '+':
+             cout << num1+num2;
+             break;
+
+    case '-':
+            if(num1>num2){
+             cout<< num1-num2;
+            }
+            else{
+              cout<< "Result below is found to be negative";
+              cout<< num1-num2;
+            }
+            break; 
+    case '*':
+            cout<< num1*num2;
+            break;
+
+    case '/':
+             if(num2!= 0){
+               cout<< num1/num2;
+             }
+             else{
+               cout<<"Second number is found to be zero which calculates answer to be infinity , so please enter second number greater that zero";
+             }
+            break;                  
+                     
+  }
+
+}
